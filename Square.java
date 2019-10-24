@@ -1,5 +1,5 @@
 package sbafivelastSba;
 
-public class Circle {
+public class Square {
 
 }

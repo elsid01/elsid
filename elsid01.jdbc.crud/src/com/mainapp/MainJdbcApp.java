@@ -33,10 +33,10 @@ public class MainJdbcApp {
 	}
 	private static void crudOperation() throws SQLException {
 		//createUser();
-		removeUser();
-		editUser();
-		showUser();
-		showUser();
+		//removeUser();
+		//editUser();
+		//showUser();
+		//showUser();
 
 	}
 	
@@ -47,7 +47,7 @@ public class MainJdbcApp {
 		
 	}
 
-	private static void editUser() {
+	private static void editUser() throws SQLException {
 		//get user id of the user to edit
 		UsersProfile userProfilecurrent = new UsersProfile();
 		userProfilecurrent.setUserId(1);
@@ -66,7 +66,7 @@ public class MainJdbcApp {
 		String sql = "UPDATE usersProfile SET "
 				+ "firstName='a',"
 				+ "lastName='b',"
-				+" email='c' ,"
+				+" un='c' ,"
 				+ "userName='d',"
 				+" PASSWORD ='e' WHERE userId=2";
 ;
@@ -76,7 +76,7 @@ public class MainJdbcApp {
 	private static void removeUser() throws SQLException {
 		//get userId 
 		UsersProfile userProfile= new UsersProfile();
-		userProfile.setUserId(1);
+		userProfile.setUserId(2);
 		//show user account 
 		//Delete user account
 		deleteUser(userProfile);
@@ -101,7 +101,7 @@ public class MainJdbcApp {
 		//1. create statement
 		java.sql.Statement som =  dbcon.createStatement();
 		//2.execute query
-		String sqlm ="INSERT INTO usersprofile VALUES(2 , 'aafname','aaLastname', 'aaaemail', 'aaauserName','aaapasword')"; 
+		String sqlm ="INSERT INTO usersprofile VALUES(1 , 'aafname','aaLastname', 'aaaemail', 'aaauserName','aaapasword')"; 
 				
 		String sqlm1="INSERT INTO usersprofile VALUES("
 		+ userProfile.getUserId()

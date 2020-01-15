@@ -23,6 +23,7 @@ public class UserProfile {
 	@Column(name="UserId")
 	private int UserId;
 
+	
 	@Basic
 	@Column(name="firstName")
 	private String firstName;
@@ -96,6 +97,12 @@ public class UserProfile {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+//toString Method
+	@Override
+	public String toString() {
+		return "UserProfile [UserId=" + UserId + ", firstName=" + firstName + ", lastName=" + lastName + ", email="
+				+ email + ", userName=" + userName + ", password=" + password + "]";
 	}
 
 }

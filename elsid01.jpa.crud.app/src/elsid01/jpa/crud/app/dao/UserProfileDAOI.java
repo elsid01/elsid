@@ -1,9 +1,9 @@
 package elsid01.jpa.crud.app.dao;
 
+
 import java.sql.SQLException;
 import java.util.ArrayList;
-
-
+import java.util.List;
 
 import elsid01.jpa.crud.app.entities.UserProfile;
 
@@ -21,6 +21,6 @@ public interface UserProfileDAOI {
 
 	public UserProfile getUserById(int userId) throws ClassNotFoundException, SQLException;
 
-	public ArrayList<UserProfile> getAllUser() throws SQLException, ClassNotFoundException;
+	public List<UserProfile> getAllUser() throws SQLException, ClassNotFoundException;
 
 }
